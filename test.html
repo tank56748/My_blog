@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div class="block" style="background-color:brown; width:300px; height:300px; display:flex; justify-content:center; align-items:center">
+	<div class="block__inner" style="background-color:green; width:200px; height:200px; display:flex; justify-content:center; align-items:center">
+		<div class="block__inner-inner" style="background-color:yellow; width:100px; height:100px">
+		</div>
+		<br>
+		<a href="/" class="link">ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</a>
+	</div>
+</div>
+<script>
+	const blockForMouse = document.querySelector('.block-for-mouse');
+
+	blockForMouse.addEventListener("mousemove", function (event) {
+		blockForMouse.innerHTML =
+			`clientX - ${event.clientX} <br> clientY - ${event.clientY}`;
+	});
+
+
+
+
+
+
+
+		/*const button = document.querySelector('.copyright');
+		function showConsole(event) {
+			// Тип события
+			console.log(event.type);
+			// Объект на котором сработал обработчик
+			console.log(event.target);
+			// Объект к которому назначен обработчик
+			console.log(event.currentTarget);
+			// Положение курсора по оси X
+			console.log(event.clientX);
+			// Положение курсора по оси Y
+			console.log(event.clientY);
+			// Все детали события
+			console.log(event);
+		}
+		button.addEventListener("click", showConsole);
+
+
+		let deleteFriend = document.querySelector('.jc-center > .dm_hover > .heart-blue');
+		setTimeout(function(){
+			$('deleteFriend').trigger('click');
+		}, 1000);
+		deleteFriend.forEach(function myfoo(item, i){
+			setTimeout(function(){
+				item.onclick();
+			}, 1000 * ++i)
+		});*/
+
+
+</script>
+</body>
+</html>
