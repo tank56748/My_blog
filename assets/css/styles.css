@@ -279,7 +279,9 @@ main {
 	}
 }
 
-
+.one-comment [data]:hover{
+	color:red !important;
+}
 /*
 	FOOTER
 */

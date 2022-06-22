@@ -36,6 +36,34 @@
 			}
 		}
 	}
+	if($_POST['action'] == 'add_com'){
+		$comment = $_POST['comment'];
+		$login = $_POST['login'];
+		$post_id = $_POST['post_id'];
+		$session = $_POST['session'];
+		if($session == 0 && !filter_var($login, FILTER_VALIDATE_EMAIL)){
+			echo "Email $login указан неверно!";
+		}elseif(strlen($comment) < 3){
+			echo 'Комментарий слишком короткий!';
+		}else{
+			$comment = trim(strip_tags(stripcslashes(htmlspecialchars($comment))));
+			if($session == 0){
+				$login = trim(strip_tags(stripcslashes(htmlspecialchars($login))));
+			}
+			$com = [
+				'comment' => $comment,
+				'id_post' => $post_id,
+				'login' => $login,
+			];
+			insert('comments', $com);
+			echo 'ok';
+		}
+	}
+	if($_POST['action'] == 'del_com'){
+		$id = $_POST['id'];
+		delete('comments', $id);
+		echo 'ok';
+	}
 	?>
 <?php else: echo "Ошибка доступа"; ?>
 <?php endif; ?>

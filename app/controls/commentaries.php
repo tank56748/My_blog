@@ -28,6 +28,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['button-comment'])){
 		];
 		insert('comments', $com);
 	}
-
 }
 ?>
