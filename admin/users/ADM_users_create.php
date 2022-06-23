@@ -64,5 +64,3 @@
 	el_admin.setAttribute('selected', '');
 	<? endif; ?>
 </script>
-
-

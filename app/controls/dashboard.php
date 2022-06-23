@@ -1,6 +1,5 @@
 <?php
 
-
 // Яндекс погода ///////////////////////////////////////////////////////////
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/app/SxGeo/SxGeo.php');
 $ip = $_SERVER['REMOTE_ADDR'];
@@ -69,32 +68,4 @@ $moon_fases = [
 	'moon-code-14' => 'растущая луна',
 	'moon-code-15' => 'растущая луна',
 ];
-
-
-// Яндекс расписание //////////////////////////////////////////////////////////
-
-/*$query2 = http_build_query(array('apikey'=>"235b1eb4-307a-4fb9-9f84-0cb605e76bcd", 'from'=>"s2000009", 'to' => 's9600686', 'limit' => '200'));
-$url2 = "https://api.rasp.yandex.net/v3.0/search/?" . $query2;
-$rasp_json6 = file_get_contents($url2);
-$rasp6 = json_decode($rasp_json6, true);
-$query = http_build_query(array('apikey'=>"235b1eb4-307a-4fb9-9f84-0cb605e76bcd", 'uid'=>"6804_0_2000003_g22_4", 'format' => 'json'));
-$url = "https://api.rasp.yandex.net/v3.0/thread/?" . $query;
-$stations_json1 = file_get_contents($url);
-$stations1 = json_decode($stations_json1, true);
-$arr_stations = [];
-foreach($stations1["stops"] as $value){
-	$arr_stations += [$value['station']['code'] => $value['station']['title']];
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
+?>

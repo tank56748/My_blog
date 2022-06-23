@@ -4,6 +4,7 @@
 
 <?php include ($_SERVER['DOCUMENT_ROOT'] . '/app/controls/topics.php'); ?>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/admin/topics/sort_topics.php'); ?>
+
 <main>
 	<? include ($_SERVER['DOCUMENT_ROOT'] . '/app/include/aside_admin.php');?>
 	<div class="posts">
@@ -59,8 +60,3 @@
 		});
 	</script>
 </main>
-
-
-
-
-

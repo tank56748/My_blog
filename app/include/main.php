@@ -250,18 +250,6 @@ $Top_posts = $query->fetchAll();
 				</div>
 				<? endforeach; ?>
 				<!--Посты-->
-				<script>
-					/*function click(e){
-						$.ajax({
-							url: "/app/include/main.php",
-							type: "POST",
-							data: { 'data' : 'ref_sell', 'id' : e,},
-							success: function(data){
-								<?/* echo $_POST['data'] . " " . $_POST['id'];*/?>
-							}
-						});
-					}*/
-				</script>
 			</div>
 			<? include ($_SERVER['DOCUMENT_ROOT'] . '/app/include/sidebar.php');?>
 		</div>

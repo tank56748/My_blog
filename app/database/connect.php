@@ -22,5 +22,4 @@ try {
 	die("Ошибка подключения к базе данных");
 }
 
-/*$conn = mysqli_connect($host, $db_user, $db_pass, $db_name);*/
 ?>

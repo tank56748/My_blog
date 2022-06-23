@@ -102,6 +102,4 @@ if($_GET['sort'] == "users_date_desc"){
 	$fa_date = "down";
 }
 
-
 ?>
-

@@ -21,5 +21,3 @@ $time2 = microtime() - $time1;
 echo $time2;
 
 ?>
-
-

@@ -68,10 +68,4 @@ if($_GET['sort'] == "posts_status_desc"){
 	$fa_status = "down";
 }
 
-
-
-
-
-
-
 ?>

@@ -122,31 +122,5 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-post-update']))
 	}
 }
 
-
-
-// Удаление записи
-/*if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['del_id'])){
-	$id = $_GET['del_id'];
-	$del_post = selectOne('posts', ["id" => $id]);
-	if(!empty($del_post['img']) && $del_post['img'] != "nofoto.png"){
-		$del_link_img = $_SERVER['DOCUMENT_ROOT'] . "/assets/images/posts/" . $del_post['img'];
-		unlink($del_link_img);
-	}
-	delete("posts", $id);
-	header('location: ' . $http . $_SERVER['SERVER_NAME'] . '?page=ADM_posts_index');
-}*/
-
-// Опубликовать/Снять с публикации запись
-/*if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['publish'])) {
-	$publish_id = $_GET['publish'];
-	update('posts', $publish_id, ['status'=> 1]);
-	header('location: '.$http.$_SERVER['SERVER_NAME'].'?page=ADM_posts_index');
-}
-if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['unpublish'])) {
-	$unpublish_id = $_GET['unpublish'];
-	update('posts', $unpublish_id, ['status'=> 0]);
-	header('location: '.$http.$_SERVER['SERVER_NAME'].'?page=ADM_posts_index');
-}*/
-
 $status_index = ["1" => "Опубликован", "0" => "В черновике"];
 ?>

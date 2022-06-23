@@ -1,5 +1,6 @@
 <?php
-include ($_SERVER['DOCUMENT_ROOT'] . '/app/controls/commentaries.php');
+$errMsg = [];
+$post_id = $_GET['id_post'];
 ?>
 
 <div style="width:100%; margin-top: 20px;" class="comment">

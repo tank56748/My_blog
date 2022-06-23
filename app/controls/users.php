@@ -223,38 +223,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-user-update']))
 				"gender" => $gender,
 				"password" => $p2
 			];
-			/*tt($user1);
-			exit();*/
 			update('users', 86, $user_edit);
-			/*$sql = "UPDATE users SET admin = '$admin', username = '$username', email = '$email', age = '$age', gender = '$gender', password = '$p2' WHERE id = $id";
-			$query = $pdo->prepare($sql);
-			$query->execute();*/
 			header('location: ' . $http . $_SERVER['SERVER_NAME'] . '?page=ADM_users_index');
 		}
 	}
 }
-
-
-
-
-/*// Удаление пользователя
-if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['del_user'])){
-	$id = $_GET['del_user'];
-	delete('users', $id);
-	header('location: ' . $http . $_SERVER['SERVER_NAME'] . '?page=ADM_users_index');
-}*/
-
-/*// Сделать админом/Сделать пользователем
-if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['do_admin'])) {
-	$do_admin = $_GET['do_admin'];
-	update('users', $do_admin, ['admin'=> 1]);
-	header('location: '.$http.$_SERVER['SERVER_NAME'].'?page=ADM_users_index');
-}
-if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['do_user'])) {
-	$do_user = $_GET['do_user'];
-	update('users', $do_user, ['admin'=> 0]);
-	header('location: '.$http.$_SERVER['SERVER_NAME'].'?page=ADM_users_index');
-}*/
 
 
 
