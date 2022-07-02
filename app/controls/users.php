@@ -78,6 +78,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-log'])){
 	}else{
 		$existence_mail = selectOne('users', ['email' => $email]);
 		if($existence_mail && password_verify($pass1, $existence_mail['password'])){
+			if($_POST['cookie_login'] == 1){
+				cookie_login($email);
+			}
 			userAuth($existence_mail);
 		}else{
 			array_push($errMsg, 'Неверная почта или пароль');

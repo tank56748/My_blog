@@ -15,13 +15,10 @@
 		<li id="ADM_settings">
 			<a href="?page=ADM_settings_index">Настройки</a>
 		</li>
-		<li id="ADM_dash">
-			<a href="?page=ADM_dash_dashboard">Dashboard</a>
-		</li>
 	</ul>
 </aside>
 
 <?php
-$page_filter = preg_filter('/(_index\w*)|(_edit\w*)|(_create\w*)|(_dashboard\w*)/', '', $page);
+$page_filter = preg_filter('/(_index\w*)|(_edit\w*)|(_create\w*)/', '', $page);
 ?>
 <script>document.getElementById('<?=$page_filter?>').className = 'focus';</script>

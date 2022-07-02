@@ -10,8 +10,6 @@ if($_SESSION['admin'] == 1){
 		include ($_SERVER['DOCUMENT_ROOT'] . "/admin/topics/$page.php");
 	}elseif(strpos($page, "users") !== false){
 		include ($_SERVER['DOCUMENT_ROOT'] . "/admin/users/$page.php");
-	}elseif(strpos($page, "dash") !== false){
-		include ($_SERVER['DOCUMENT_ROOT'] . "/admin/dash/$page.php");
 	}
 }else{
 	include ($_SERVER['DOCUMENT_ROOT'] . '/app/include/error_access.php');
@@ -19,5 +17,6 @@ if($_SESSION['admin'] == 1){
 
 $time2 = microtime() - $time1;
 echo $time2;
+
 
 ?>

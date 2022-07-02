@@ -25,6 +25,20 @@ function userAuth($arr){
 		header('location: ' . $http . $_SERVER['SERVER_NAME']);
 	}
 }
+
+// Куки логин
+function cookie_login($email){
+	$cookie = $email . microtime();
+	$cookie = addslashes($cookie);
+	$cookie_hash = password_hash($cookie, PASSWORD_DEFAULT);
+	setcookie('cookie_login', $cookie_hash, time() + 3600*24*30, '/');
+	global $pdo;
+	$sql = "UPDATE users SET cookie_login = '$cookie_hash' WHERE email = '$email'";
+	$query = $pdo->prepare($sql);
+	$query->execute();
+}
+
+// Принт пре
 function tt($value){
 	echo "<pre>";
 	print_r($value);

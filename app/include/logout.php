@@ -8,6 +8,7 @@ if($_SESSION['FAIL_NUM'] > 3) {
 	unset($_SESSION['login']);
 	unset($_SESSION['admin']);
 	unset($_SESSION['FAIL_NUM']);
+	setcookie("cookie_login", "", time() - 3600);
 	header('location: ' . $http . $_SERVER['SERVER_NAME']);
 }
 ?>

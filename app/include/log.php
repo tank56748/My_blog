@@ -15,7 +15,9 @@
 				<label>Введите пароль</label>
 				<input name="password" type="password" class="reg-input" placeholder="Введите ваш пароль...">
 			</div>
-
+			<div class="form-item">
+				<input type="checkbox" name="cookie_login" value="1"><span> Запомнить меня</span>
+			</div>
 			<button name="button-log" class="submit-btn1">Войти</button>
 			<div id="or">Или</div>
 		</form>

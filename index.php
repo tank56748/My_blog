@@ -39,6 +39,15 @@ if(isset($_GET['pagination'])){
 	$pagination_get = "";
 }
 ?>
+<?php
+if(empty($_SESSION['id']) && isset($_COOKIE['cookie_login'])){
+	$cookie = $_COOKIE['cookie_login'];
+	$row = selectOne('users', ['cookie_login' => $cookie]);
+	if(!empty($row)){
+		userAuth($row);
+	}
+}
+?>
 
 <!doctype html>
 <html lang="en">
@@ -126,10 +135,6 @@ if(isset($_GET['pagination'])){
 		include ($_SERVER['DOCUMENT_ROOT'] . "/app/include/404.php");
 	}
 ?>
-<script>
-	let date = new Date('2022');
-	console.log(date);
-</script>
 
 <footer>
 	<div class="footer">
@@ -191,7 +196,17 @@ if(isset($_GET['pagination'])){
 	</div>
 </footer>
 
+<script>
+	function foo (a){
+		var b = a + a;
+		return b + a;
+	}
+	console.log(foo(5));
+</script>
+<?
 
+
+?>
 
 
 
